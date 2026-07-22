@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+<div>
+
+<h1>Become a Professional Developer</h1>
+
+<p>Learn Python, Django, Data Analytics and Power BI.</p>
+
+<a href="/courses/" class="btn">Explore Courses</a>
+
+</div>
+
+<div>
+
+<img src="{% static 'images/hero.png' %}" width="500">
+
+</div>
+
+</section>
+
+<section class="courses">
+
+<h2>Popular Courses</h2>
+
+<div class="card-container">
+
+<div class="card">
+
+<img src="{% static 'images/python.png' %}" width="100">
+
+<h3>Python</h3>
+
+<p>40 Hours</p>
+
+<button>Enroll</button>
+
+</div>
+
+<div class="card">
+
+<img src="{% static 'images/django.png' %}" width="100">
+
+<h3>Django</h3>
+
+<p>35 Hours</p>
+
+<button>Enroll</button>
+
+</div>
+
+<div class="card">
+
+<img src="{% static 'images/powerbi.png' %}" width="100">
+
+<h3>Power BI</h3>
+
+<p>25 Hours</p>
+
+<button>Enroll</button>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

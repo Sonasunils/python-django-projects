@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Trainers
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'trainer.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<h1>Our Trainers</h1>
+
+<div class="card-container">
+
+{% for trainer in trainers %}
+
+<div class="card">
+
+<img src="{% static trainer.image %}" width="150">
+
+<h2>{{ trainer.name }}</h2>
+
+<p>{{ trainer.skill }}</p>
+
+<p>{{ trainer.experience }}</p>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+About
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'about.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section>
+
+<h1>About LearnHub</h1>
+
+<p>
+
+LearnHub provides industry-ready training in Programming,
+
+Web Development, Data Analytics and Artificial Intelligence.
+
+</p>
+
+<div class="stats">
+
+<div>
+
+<h2>500+</h2>
+
+<p>Students</p>
+
+</div>
+
+<div>
+
+<h2>20+</h2>
+
+<p>Courses</p>
+
+</div>
+
+<div>
+
+<h2>15</h2>
+
+<p>Expert Trainers</p>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,103 @@
+/* Hero Section */
+
+.hero{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:70px;
+
+}
+
+.hero div{
+
+    width:50%;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+    color:#1f2937;
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+    margin-bottom:25px;
+    color:#555;
+
+}
+
+.hero img{
+
+    width:100%;
+}
+
+/* Popular Courses */
+
+.courses{
+
+    background:white;
+    text-align:center;
+
+}
+
+.courses h2{
+
+    font-size:36px;
+    color:#2563eb;
+    margin-bottom:30px;
+
+}
+
+/* Card Images */
+
+.card img{
+
+    margin-bottom:15px;
+
+}
+
+.card h3{
+
+    color:#1f2937;
+    margin-bottom:10px;
+
+}
+
+/* Hover */
+
+.card:hover{
+
+    background:#f8fbff;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero{
+
+    flex-direction:column;
+    text-align:center;
+
+}
+
+.hero div{
+
+    width:100%;
+    margin-bottom:30px;
+
+}
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+}
