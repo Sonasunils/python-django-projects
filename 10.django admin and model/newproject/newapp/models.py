@@ -10,7 +10,7 @@ class Author(models.Model):
 class Book(models.Model):
     title=models.CharField(max_length=200)
     author=models.ForeignKey(Author,on_delete=models.CASCADE)
-    published_date=models.DateField((""), auto_now=False, auto_now_add=False)
+    published_date=models.DateField((""), auto_now=True, auto_now_add=False)
     price=models.DecimalField(max_digits=6,decimal_places=2)
     available=models.BooleanField(default=True)
     def __str__(self):

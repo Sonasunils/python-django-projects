@@ -5,3 +5,4 @@ from .models import Author, Book
 def book_list(request):
     books = Book.objects.select_related('author').all()
     return render(request, 'books.html', {'books': books})
+

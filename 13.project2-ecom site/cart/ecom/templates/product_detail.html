@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+{{ product.name }}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="card">
+
+    {% if product.image %}
+
+        <img
+            src="{{ product.image.url }}"
+            style="width:400px;"
+        >
+
+    {% endif %}
+
+
+    <h1>
+        {{ product.name }}
+    </h1>
+
+
+    <p>
+        {{ product.description }}
+    </p>
+
+
+    <h2>
+        ₹{{ product.price }}
+    </h2>
+
+
+    <p>
+
+        Available Stock:
+        {{ product.stock }}
+
+    </p>
+
+
+    {% if product.stock > 0 %}
+
+        <button class="btn">
+            Add to Cart
+        </button>
+
+    {% else %}
+
+        <p>
+            Out of Stock
+        </p>
+
+    {% endif %}
+
+
+</div>
+
+
+{% endblock %}
