@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ category.name }} - ShopKart
+{% endblock %}
+
+
+{% block content %}
+
+<section class="category-header">
+
+    <h1>
+        {{ category.name }}
+    </h1>
+
+    <p>
+        Explore all products in {{ category.name }}
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="product-container">
+
+        {% for product in products %}
+
+        <div class="product-card">
+
+            <a
+                href="{% url 'product_detail' product.id %}"
+            >
+
+                <img
+                    src="{{ product.image.url }}"
+                    alt="{{ product.name }}"
+                >
+
+            </a>
+
+
+            <div class="product-info">
+
+                <h3>
+                    {{ product.name }}
+                </h3>
+
+
+                <p class="description">
+                    {{ product.description|truncatewords:15 }}
+                </p>
+
+
+                <div class="price-area">
+
+                    <span class="price">
+                        ₹{{ product.price }}
+                    </span>
+
+
+                    {% if product.old_price %}
+
+                    <span class="old-price">
+                        ₹{{ product.old_price }}
+                    </span>
+
+                    {% endif %}
+
+                </div>
+
+
+                <a
+                    href="{% url 'product_detail' product.id %}"
+                    class="view-button"
+                >
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        {% empty %}
+
+        <div class="empty">
+
+            <h2>
+                No Products Found
+            </h2>
+
+            <p>
+                There are no products available
+                in this category.
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

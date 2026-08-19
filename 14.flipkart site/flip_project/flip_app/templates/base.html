@@ -1,0 +1,126 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        Flipkart Clone
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet"
+          href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <a href="{% url 'home' %}">
+            ShopKart
+        </a>
+    </div>
+
+
+    <div class="search">
+
+        <input
+            type="text"
+            placeholder="Search for products, brands and more"
+        >
+
+        <button>
+            🔍
+        </button>
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="#">
+            Login
+        </a>
+
+        <a href="#">
+            🛒 Cart
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    {% block content %}
+    {% endblock %}
+
+</main>
+
+
+<footer>
+
+    <div>
+
+        <h3>ShopKart</h3>
+
+        <p>
+            Your trusted online shopping destination.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h4>Quick Links</h4>
+
+        <a href="#">
+            About Us
+        </a>
+
+        <a href="#">
+            Contact
+        </a>
+
+        <a href="#">
+            Privacy Policy
+        </a>
+
+    </div>
+
+
+    <div>
+
+        <h4>Customer Service</h4>
+
+        <a href="#">
+            Help Center
+        </a>
+
+        <a href="#">
+            Returns
+        </a>
+
+        <a href="#">
+            Shipping
+        </a>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>

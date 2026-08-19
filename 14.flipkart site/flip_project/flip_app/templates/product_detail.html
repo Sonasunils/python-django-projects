@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ product.name }} - ShopKart
+{% endblock %}
+
+
+{% block content %}
+
+<section class="product-detail">
+
+    <div class="detail-image">
+
+        <img
+            src="{{ product.image.url }}"
+            alt="{{ product.name }}"
+        >
+
+    </div>
+
+
+    <div class="detail-info">
+
+        <p class="category-name">
+            {{ product.category.name }}
+        </p>
+
+
+        <h1>
+            {{ product.name }}
+        </h1>
+
+
+        <div class="rating">
+            ⭐⭐⭐⭐⭐
+            <span>
+                4.5
+            </span>
+        </div>
+
+
+        <h2 class="detail-price">
+            ₹{{ product.price }}
+        </h2>
+
+
+        {% if product.old_price %}
+
+        <p class="old-price">
+            ₹{{ product.old_price }}
+        </p>
+
+        {% endif %}
+
+
+        <p class="description">
+            {{ product.description }}
+        </p>
+
+
+        {% if product.stock > 0 %}
+
+        <p class="stock">
+            ✓ In Stock
+        </p>
+
+
+        <div class="buttons">
+
+            <button class="cart-button">
+                🛒 Add to Cart
+            </button>
+
+
+            <button class="buy-button">
+                ⚡ Buy Now
+            </button>
+
+        </div>
+
+
+        {% else %}
+
+        <p class="out-stock">
+            Out of Stock
+        </p>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}
